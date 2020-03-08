@@ -1,0 +1,144 @@
+﻿
+$cd-btn: #4b0a6a;
+$cd-txtvert: #1f9999;
+$cd-txt--invalid: #fff;
+$cd-danger: #b20a37;
+$cd-txtviolet: #6300a0;
+body{
+    margin:0;
+}
+header{
+    margin:0;
+   
+}
+.hautdepage {
+    background-image: url("img/gears.png");
+    margin: 0;
+
+
+    &__logo {
+        /*transition-property: transform;
+    transition-duration: 4000ms;*/
+        float: left;
+        animation: rotateAnim 20s linear infinite;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+
+        &__btn {
+            background: $cd-btn;
+            color: $cd-txtviolet;
+            font-size: 1rem;
+            /*cursor: pointer;*/
+            padding: 1rem 1rem;
+            border-radius: 5rem;
+            transform: scale(1);
+            transition-property: transform;
+            transition-duration: 500ms;
+            width: 150px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+
+            &:hover {
+                transform: scale(1.25);
+            }
+        }
+    }
+        &__cadreopaque {
+    background-color: rgba(28, 26, 26, 0.88);
+    margin-left: 350px;
+    border-radius: 5rem;
+    margin-right: 70px;
+    margin-top: 0px;
+}
+}
+
+    @keyframes rotateAnim {
+        from {
+            transform: rotate(0);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+h2 {
+    font-size: 2.5em;
+    color: $cd-txtvert;
+}
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        justify-content: center;
+    }
+
+
+.form {
+    &__group {
+        & input {
+            border: 2px solid #000000;
+            border-radius: 100rem;
+            color: $cd-txtviolet;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            outline: none;
+            padding: .5rem 1.5rem;
+            width: 100%;
+            transition: background-color 1s;
+
+            &:focus {
+                border: 2px solid $cd-txtviolet;
+                }
+                &:not(:focus):invalid {
+                        background: $cd-danger;
+                        border: 2px solid $cd-danger;
+                        color: $cd-txt--invalid;
+                    
+                
+            }
+
+        }
+    }
+}
+/*header__faitourner {
+    color: $cd-txt;
+    font-size: 3em;
+    background: $cd-txt1;
+    cursor: pointer;
+    padding: 1.85rem 3rem;
+    border-radius: 10rem;
+     &:hover + header__logo {
+        transform: rotateX(360deg);
+    }
+}*/
+
+
+h1 {
+    padding-top:50px;
+    color: $cd-txtviolet;
+    font-size: 3em;
+    padding-left:70px;
+    margin:0;
+}
+
+
+h2 {
+    color: $cd-txtvert;
+    font-size: 2em;
+    padding-left: 70px;
+}
+
+.videoflottante
+{
+    float:right;
+}
