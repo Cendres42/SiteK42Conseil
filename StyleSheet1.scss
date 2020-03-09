@@ -4,16 +4,17 @@ $cd-txtvert: #1f9999;
 $cd-txt--invalid: #fff;
 $cd-danger: #b20a37;
 $cd-txtviolet: #6300a0;
+html {
+    font-size: 62.5%;
+}
 body{
     margin:0;
 }
-header{
-    margin:0;
-   
-}
+.plop{
+    height:7rem;
+    }
 .hautdepage {
     background-image: url("img/gears.png");
-    margin: 0;
 
 
     &__logo {
@@ -21,8 +22,7 @@ header{
     transition-duration: 4000ms;*/
         float: left;
         animation: rotateAnim 20s linear infinite;
-        margin: 20px;
-        padding: 20px;
+        padding: 2rem;
     }
 
     &__menu {
@@ -30,32 +30,55 @@ header{
         justify-content: space-around;
         text-align: center;
 
+        & li, & a{
+            color: white;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
         &__btn {
             background: $cd-btn;
             color: $cd-txtviolet;
-            font-size: 1rem;
+            font-size: 2rem;
             /*cursor: pointer;*/
             padding: 1rem 1rem;
             border-radius: 5rem;
             transform: scale(1);
             transition-property: transform;
             transition-duration: 500ms;
-            width: 150px;
-            margin-bottom: 50px;
-            margin-top: 50px;
+            width: 20rem;
+            margin-bottom: 5rem;
+            margin-top: 5rem;
 
             &:hover {
                 transform: scale(1.25);
             }
+            /*&:active{
+                background-color:$cd-txtvert;
+            }*/
         }
     }
-        &__cadreopaque {
-    background-color: rgba(28, 26, 26, 0.88);
-    margin-left: 350px;
-    border-radius: 5rem;
-    margin-right: 70px;
-    margin-top: 0px;
+
+    &__cadreopaque {
+        background-color: rgba(28, 26, 26, 0.88);
+        margin-left: 35rem;
+        border-radius: 5rem;
+        margin-right: 7rem;
+    }
+
+    & h2 {
+        font-size: 4rem;
+        color: $cd-txtvert;
+        padding-bottom: 5rem;
+        padding-left: 7rem;
+    }
 }
+h1 {
+    padding-top: 5rem;
+    color: $cd-txtviolet;
+    font-size: 6rem;
+    padding-left: 7rem;
+    margin: 0;
 }
 
     @keyframes rotateAnim {
@@ -68,25 +91,13 @@ header{
         }
     }
 
-h2 {
-    font-size: 2.5em;
-    color: $cd-txtvert;
-}
-    li {
-        list-style-type: none;
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
-        justify-content: center;
-    }
+    
 
 
 .form {
     &__group {
         & input {
-            border: 2px solid #000000;
+            border: 0.2rem solid #000000;
             border-radius: 100rem;
             color: $cd-txtviolet;
             font-family: 'Montserrat', sans-serif;
@@ -97,22 +108,20 @@ h2 {
             transition: background-color 1s;
 
             &:focus {
-                border: 2px solid $cd-txtviolet;
-                }
-                &:not(:focus):invalid {
-                        background: $cd-danger;
-                        border: 2px solid $cd-danger;
-                        color: $cd-txt--invalid;
-                    
-                
+                border: 0.2rem solid $cd-txtviolet;
             }
 
+            &:not(:focus):invalid {
+                background: $cd-danger;
+                border: 0.2rem solid $cd-danger;
+                color: $cd-txt--invalid;
+            }
         }
     }
 }
 /*header__faitourner {
     color: $cd-txt;
-    font-size: 3em;
+    font-size: 3rem;
     background: $cd-txt1;
     cursor: pointer;
     padding: 1.85rem 3rem;
@@ -121,24 +130,48 @@ h2 {
         transform: rotateX(360deg);
     }
 }*/
+.contenu {
+    padding: 2rem;
+    text-align:justify;
 
+    & p, & a 
+        {font-size: 2.5rem;
+         }
+    
 
-h1 {
-    padding-top:50px;
-    color: $cd-txtviolet;
-    font-size: 3em;
-    padding-left:70px;
-    margin:0;
-}
-
-
-h2 {
-    color: $cd-txtvert;
-    font-size: 2em;
-    padding-left: 70px;
+    & h2 {
+        color: $cd-txtvert;
+        font-size: 3.5rem;
+          }
 }
 
 .videoflottante
 {
     float:right;
+}
+
+#Services {
+    display: flex;
+    justify-content: center;
+
+    &__ip, &__km, &__if, &__digit, &__moodle {
+        margin: 2rem;
+        justify-content: center;
+        text-align: center;
+
+        & a {
+            color: $cd-txtviolet;
+            text-decoration:none;
+        }
+    }
+}
+#Accueil {
+    text-align: justify;
+
+    & li {
+        font-size: 2.5rem;
+        list-style-type: circle;
+        color: $cd-txtviolet;
+        padding-right:37rem;
+    }
 }
