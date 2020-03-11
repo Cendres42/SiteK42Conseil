@@ -23,7 +23,7 @@ body{
         /*transition-property: transform;
     transition-duration: 4000ms;*/
         float: left;
-        animation: rotateAnim 20s linear infinite;
+        animation: rotateAnim 20s ease-in-out infinite;
         padding: 2rem;
     }
 
@@ -46,8 +46,8 @@ body{
             padding: 1rem 1rem;
             border-radius: 5rem;
             transform: scale(1);
-            transition: transform 1000ms, background 500ms 500ms;
-           
+            transition: transform 1000ms, background 500ms;
+            transition-delay: 0, 500ms;
             width: 20rem;
             margin-bottom: 5rem;
             margin-top: 5rem;

@@ -1,0 +1,154 @@
+.form__group input {
+  border: 0.2rem solid #000000;
+  border-radius: 100rem;
+  color: #6300a0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  transition: background-color 1s;
+}
+.form__group input:focus {
+  border: 0.2rem solid #6300a0;
+}
+.form__group input:not(:focus):invalid {
+  background: #b20a37;
+  border: 0.2rem solid #b20a37;
+  color: #fff;
+}
+
+/*header__faitourner {
+    color: $cd-txt;
+    font-size: 3rem;
+    background: $cd-txt1;
+    cursor: pointer;
+    padding: 1.85rem 3rem;
+    border-radius: 10rem;
+     &:hover + header__logo {
+        transform: rotateX(360deg);
+    }
+}*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+.plop {
+  height: 7rem;
+}
+
+.hautdepage {
+  background-image: url("img/gears.png");
+}
+.hautdepage__logo {
+  /*transition-property: transform;
+  transition-duration: 4000ms;*/
+  float: left;
+  animation: rotateAnim 20s ease-in-out infinite;
+  padding: 2rem;
+}
+.hautdepage__menu {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.hautdepage__menu li, .hautdepage__menu a {
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+}
+.hautdepage__menu__btn {
+  background: #4b0a6a;
+  color: #6300a0;
+  font-size: 2rem;
+  /*cursor: pointer;*/
+  padding: 1rem 1rem;
+  border-radius: 5rem;
+  transform: scale(1);
+  transition: transform 1000ms, background 500ms;
+  transition-delay: 0, 500ms;
+  width: 20rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  /*&:active{
+      background-color:$cd-txtvert;
+  }*/
+}
+.hautdepage__menu__btn:hover {
+  transform: scale(1.25);
+  background: #a14ed3;
+}
+.hautdepage__cadreopaque {
+  background-color: rgba(28, 26, 26, 0.88);
+  margin-left: 35rem;
+  border-radius: 5rem;
+  margin-right: 7rem;
+}
+.hautdepage h2 {
+  font-size: 4rem;
+  color: #1f9999;
+  padding-bottom: 5rem;
+  padding-left: 7rem;
+}
+
+h1 {
+  padding-top: 5rem;
+  color: #6300a0;
+  font-size: 6rem;
+  padding-left: 7rem;
+  margin: 0;
+}
+
+@keyframes rotateAnim {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.contenu {
+  padding: 2rem;
+  text-align: justify;
+}
+.contenu p, .contenu a {
+  font-size: 2.5rem;
+}
+.contenu h2 {
+  color: #1f9999;
+  font-size: 3.5rem;
+}
+
+.videoflottante {
+  float: right;
+}
+
+#Services {
+  display: flex;
+  justify-content: center;
+}
+#Services__ip, #Services__km, #Services__if, #Services__digit, #Services__moodle {
+  margin: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+#Services__ip a, #Services__km a, #Services__if a, #Services__digit a, #Services__moodle a {
+  color: #6300a0;
+  text-decoration: none;
+}
+
+#Accueil {
+  text-align: justify;
+}
+#Accueil li {
+  font-size: 2.5rem;
+  list-style-type: circle;
+  color: #6300a0;
+  padding-right: 37rem;
+}
+
+/*# sourceMappingURL=style.css.map */
