@@ -141,6 +141,15 @@ h1 {
   text-decoration: none;
 }
 
+.bton {
+  transform: rotate(0deg);
+  transition: transform 500ms ease-in-out;
+  transform-origin: 50%;
+}
+.bton:hover {
+  transform: rotate(180deg);
+}
+
 #Accueil {
   text-align: justify;
 }
@@ -149,6 +158,42 @@ h1 {
   list-style-type: circle;
   color: #6300a0;
   padding-right: 37rem;
+}
+
+.R1 {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.cadreviolet {
+  margin: 3rem;
+}
+.cadreviolet h3 {
+  background: #4b0a6a;
+  text-align: center;
+  font-size: 2rem;
+  /*cursor: pointer;*/
+  padding: 1rem 1rem;
+  border-radius: 5rem;
+}
+.cadreviolet h3 a {
+  color: white;
+}
+.cadreviolet a {
+  color: #6300a0;
+  text-align: center;
+  text-decoration: none;
+}
+
+h3:hover + .tourni {
+  transform: scaleX(1);
+}
+
+.tourni {
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 500ms;
 }
 
 /*# sourceMappingURL=style.css.map */
