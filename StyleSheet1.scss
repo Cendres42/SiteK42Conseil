@@ -4,7 +4,6 @@ $cd-txtvert: #1f9999;
 $cd-txt--invalid: #fff;
 $cd-danger: #b20a37;
 $cd-txtviolet: #6300a0;
-@import"./Layout/formulaire";
 
 html {
     font-size: 62.5%;
@@ -15,7 +14,7 @@ body{
 .plop{
     height:7rem;
     }
-.hautdepage {
+.hautdepage, #footer {
     background-image: url("img/gears.png");
 
 
@@ -32,7 +31,7 @@ body{
         justify-content: space-around;
         text-align: center;
 
-        & li, & a{
+        & li{
             color: white;
             text-decoration: none;
             list-style-type: none;
@@ -180,12 +179,34 @@ h1 {
   }
 h3{
   &:hover + .tourni {
-  transform: scaleX(1);
+  transform: scaleY(1);
         }
 }
   .tourni{
-      transform-origin: left;
-      transform: scaleX(0);
+      transform-origin: 50% top;
+      transform: scaleY(0);
       transition: transform 500ms;
 
           }
+          #Contact, #Contact li, #Contact a {
+                  text-align: left;
+                  font-size: 1.5rem;
+                  list-style-type: circle;
+                  color: white;
+                  margin:0.5rem;
+                }
+          #Contact{
+            background-color: rgba(28, 26, 26, 0.88);
+                  margin-left: 7rem;
+                  border-radius: 5rem;
+                  margin-right: 85rem;
+                  padding:2rem;
+              }
+.hautdepage__menu__btn {
+  text-align: center;
+  & a{
+    color: white;
+  text-decoration: none;
+  list-style-type: none;
+}
+}

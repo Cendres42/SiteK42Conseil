@@ -1,34 +1,3 @@
-.form__group input {
-  border: 0.2rem solid #000000;
-  border-radius: 100rem;
-  color: #6300a0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.5rem;
-  outline: none;
-  padding: 0.5rem 1.5rem;
-  width: 100%;
-  transition: background-color 1s;
-}
-.form__group input:focus {
-  border: 0.2rem solid #6300a0;
-}
-.form__group input:not(:focus):invalid {
-  background: #b20a37;
-  border: 0.2rem solid #b20a37;
-  color: #fff;
-}
-
-/*header__faitourner {
-    color: $cd-txt;
-    font-size: 3rem;
-    background: $cd-txt1;
-    cursor: pointer;
-    padding: 1.85rem 3rem;
-    border-radius: 10rem;
-     &:hover + header__logo {
-        transform: rotateX(360deg);
-    }
-}*/
 html {
   font-size: 62.5%;
 }
@@ -41,27 +10,27 @@ body {
   height: 7rem;
 }
 
-.hautdepage {
+.hautdepage, #footer {
   background-image: url("img/gears.png");
 }
-.hautdepage__logo {
+.hautdepage__logo, #footer__logo {
   /*transition-property: transform;
   transition-duration: 4000ms;*/
   float: left;
   animation: rotateAnim 20s ease-in-out infinite;
   padding: 2rem;
 }
-.hautdepage__menu {
+.hautdepage__menu, #footer__menu {
   display: flex;
   justify-content: space-around;
   text-align: center;
 }
-.hautdepage__menu li, .hautdepage__menu a {
+.hautdepage__menu li, #footer__menu li {
   color: white;
   text-decoration: none;
   list-style-type: none;
 }
-.hautdepage__menu__btn {
+.hautdepage__menu__btn, #footer__menu__btn {
   background: #4b0a6a;
   color: #6300a0;
   font-size: 2rem;
@@ -78,17 +47,17 @@ body {
       background-color:$cd-txtvert;
   }*/
 }
-.hautdepage__menu__btn:hover {
+.hautdepage__menu__btn:hover, #footer__menu__btn:hover {
   transform: scale(1.25);
   background: #a14ed3;
 }
-.hautdepage__cadreopaque {
+.hautdepage__cadreopaque, #footer__cadreopaque {
   background-color: rgba(28, 26, 26, 0.88);
   margin-left: 35rem;
   border-radius: 5rem;
   margin-right: 7rem;
 }
-.hautdepage h2 {
+.hautdepage h2, #footer h2 {
   font-size: 4rem;
   color: #1f9999;
   padding-bottom: 5rem;
@@ -187,13 +156,38 @@ h1 {
 }
 
 h3:hover + .tourni {
-  transform: scaleX(1);
+  transform: scaleY(1);
 }
 
 .tourni {
-  transform-origin: left;
-  transform: scaleX(0);
+  transform-origin: 50% top;
+  transform: scaleY(0);
   transition: transform 500ms;
+}
+
+#Contact, #Contact li, #Contact a {
+  text-align: left;
+  font-size: 1.5rem;
+  list-style-type: circle;
+  color: white;
+  margin: 0.5rem;
+}
+
+#Contact {
+  background-color: rgba(28, 26, 26, 0.88);
+  margin-left: 7rem;
+  border-radius: 5rem;
+  margin-right: 85rem;
+  padding: 2rem;
+}
+
+.hautdepage__menu__btn {
+  text-align: center;
+}
+.hautdepage__menu__btn a {
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=style.css.map */
