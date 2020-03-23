@@ -1,5 +1,5 @@
 html {
-  font-size: 62.5%;
+  font-size: 36%;
 }
 
 body {
@@ -19,6 +19,16 @@ body {
   float: left;
   animation: rotateAnim 20s ease-in-out infinite;
   padding: 2rem;
+}
+.hautdepage__logo img, #footer__logo img {
+  width: 24rem;
+  height: 22rem;
+}
+@media (max-width: 800px) {
+  .hautdepage__logo img, #footer__logo img {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 .hautdepage__menu, #footer__menu {
   display: flex;
@@ -94,6 +104,8 @@ h1 {
 
 .videoflottante {
   float: right;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 #Services {
@@ -280,6 +292,21 @@ h3:hover + .tourni {
   max-height: 20rem;
   max-width: 40rem;
   margin-left: 4rem;
+  border-radius: 2rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+  color: #6300a0;
+}
+
+h5 {
+  font-size: 2.52rem;
+  font-weight: bold;
+}
+
+.pp li {
+  font-size: 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
