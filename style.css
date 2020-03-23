@@ -275,4 +275,11 @@ h3:hover + .tourni {
   border-top-right-radius: 2rem;
 }
 
+.floterD img {
+  float: right;
+  max-height: 20rem;
+  max-width: 40rem;
+  margin-left: 4rem;
+}
+
 /*# sourceMappingURL=style.css.map */
