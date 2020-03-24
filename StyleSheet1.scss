@@ -93,15 +93,13 @@ h1 {
     @keyframes rotateAnim {
         from {
             transform: rotate(0);
+
         }
 
         to {
             transform: rotate(360deg);
         }
     }
-
-
-
 
 .contenu {
     padding: 2rem;
@@ -206,18 +204,27 @@ h3{
 
           #Contact, #Contact li, #Contact a {
                   text-align: left;
-                  font-size: 1.5rem;
+                  font-size: 2.5rem;
                   list-style-type: circle;
                   color: white;
                   margin:0.5rem;
+
                 }
           #Contact{
-            background-color: rgba(28, 26, 26, 0.88);
-                  margin-left: 7rem;
-                  border-radius: 5rem;
-                  margin-right: 85rem;
-                  padding:2rem;
+              display:flex;
+              flex-direction:space-around;
+
               }
+.foot1, .anim-bars, .anim-ball{
+  background-color: rgba(28, 26, 26, 0.88);
+
+                    margin-left: 7rem;
+                    border-radius: 5rem;
+                    padding:2rem;
+                    margin-right:30rem;
+}
+
+
 .hautdepage__menu__btn {
   text-align: center;
   & a{
@@ -316,3 +323,80 @@ h5{
 .pp li{
   font-size:2.5rem;
 }
+
+@keyframes bars {
+    0% {
+        transform: scaleY(0.5);
+
+    }
+    100% {
+        transform: scaleY(1.0);
+    }
+}
+$size: 3vh;
+$anim-dur:1000ms;
+$num-bar:7;
+$anim-delai:$anim-dur/$num-bar;
+.foot2 {
+    width: $size*10;
+    height: $size*7.5;
+    display: flex;
+    justify-content: space-evenly;
+    margin:2rem 5rem 2rem 3rem;
+
+    & .bar {
+        background-color:$cd-txtvert;
+        height: 100%;
+        width: $size;
+        animation: bars $anim-dur backwards infinite ease-in-out alternate;
+        @for $i from 1 through $num-bar{
+          &--#{$i} {
+            animation-delay:$anim-delai*$i;
+          }
+          &--#{$i}-inv{
+            animation-delay:$anim-delai*$i + random(100)*15ms;
+            animation-direction:alternate-reverse;
+            animation-fill-mode:forwards;
+            background-color: $cd-txtviolet;
+            &:hover{
+              animation-play-state:paused;
+            }
+          }
+        }
+    }
+}
+@keyframes balls {
+    0% {
+        transform: translate(0,0);
+
+    }
+    50% {
+        transform: translate(10px,10px);
+    }
+    100% {
+        transform: translate(-10px, 20px);
+    }
+  }
+$num-ball:5;
+.foot3 {
+    width: 80%;
+    height: 80%;
+    border-radius:5px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+
+    & .ball {
+        background-color:$cd-txtvert;
+        width: 30px;
+        height: 30px;
+        border-radius:50px;
+                animation: balls 3s infinite ease-in-out alternate;
+        @for $i from 1 through $num-ball{
+          &--#{$i} {
+            animation-delay:0.2s*$i;
+          }
+ }
+
+        }
+    }
